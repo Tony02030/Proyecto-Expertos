@@ -1,0 +1,62 @@
+
+1. Inteligencia espacial:
+   a) ¿Disfrutas armar rompecabezas o juegos de construcción?
+   b) ¿Tienes facilidad para orientarte en espacios desconocidos?
+   c) ¿Eres capaz de visualizar objetos en tu mente y manipularlos mentalmente?
+
+2. Inteligencia musical:
+   a) ¿Disfrutas escuchar música de diferentes géneros?
+   b) ¿Eres capaz de reconocer diferentes tonos y ritmos musicales?
+   c) ¿Te gusta componer o tocar algún instrumento musical?
+
+3. Inteligencia lingüístico-verbal:
+   a) ¿Disfrutas leer libros, artículos o poemas?
+   b) ¿Tienes facilidad para expresarte de manera clara y efectiva?
+   c) ¿Te interesa aprender nuevos idiomas y ampliar tu vocabulario?
+
+4. Inteligencia lógico-matemática:
+   a) ¿Disfrutas resolver problemas matemáticos o lógicos?
+   b) ¿Tienes facilidad para identificar patrones y relaciones lógicas?
+   c) ¿Eres capaz de razonar de manera abstracta y analítica?
+
+5. Inteligencia corporal-cinestésica:
+   a) ¿Disfrutas participar en actividades físicas o deportivas?
+   b) ¿Tienes buena coordinación motriz y habilidades físicas?
+   c) ¿Te gusta expresarte artísticamente a través del movimiento corporal?
+
+6. Inteligencia intrapersonal:
+   a) ¿Disfrutas pasar tiempo a solas para reflexionar y conocerte mejor?
+   b) ¿Eres consciente de tus propias emociones y estados de ánimo?
+   c) ¿Tienes claras metas personales y sabes cómo alcanzarlas?
+
+7. Inteligencia interpersonal:
+   a) ¿Disfrutas interactuar y relacionarte con otras personas?
+   b) ¿Eres empático/a y comprendes las emociones de los demás?
+   c) ¿Tienes habilidades para resolver conflictos y trabajar en equipo?
+
+8. Inteligencia naturalista:
+   a) ¿Disfrutas pasar tiempo al aire libre y observar la naturaleza?
+   b) ¿Tienes facilidad para reconocer y clasificar diferentes especies de plantas o animales?
+   c) ¿Te preocupa la conservación del medio ambiente y la protección de la naturaleza?
+
+9. Inteligencia existencial:
+   a) ¿Te cuestionas sobre el sentido de la vida y la existencia humana?
+   b) ¿Reflexionas sobre temas filosóficos y trascendentales?
+   c) ¿Eres consciente de tu propia existencia y la finitud de la vida?
+
+10. Inteligencia creativa:
+    a) ¿Disfrutas generar ideas nuevas y originales?
+    b) ¿Eres capaz de resolver problemas de forma creativa?
+    c) ¿Te gusta expresarte artísticamente y explorar diferentes formas de creatividad?
+
+11. Inteligencia emocional:
+    a) ¿Eres consciente de tus propias emociones y las manejas adecuadamente?
+    b) ¿Tienes habilidades para percibir y comprender las emociones de los demás?
+    c) ¿Eres capaz de manejar eficientemente situaciones emocionales difíciles?
+
+12. Inteligencia colaborativa:
+	a) ¿Disfrutas trabajar en equipo y colaborar con otros?
+	b) ¿Eres capaz de comunicarte eficientemente en un entorno grupal?
+	c) ¿Contribuyes de manera efectiva en la consecución de objetivos colectivos?
+
+Ahora genera una matriz de 12x36 siendo las filas las inteligencias y las columnas las preguntas. Esta cada fila contendrá las respuestas esperadas de un usuario, las cuales le permitirán a una aplicación decirle al usuario cuál es su inteligencia. Las respuestas estarán en el intervalo de 1,2,3,4 y 5, las preguntas especificas de cada inteligencia deben tener un valor de 5, puesto que esas tienen más peso que las otras. Las demás preguntas tienen que estar en el intervalo 1,2,3 y 4. También debés considerar que respuestas esperadas de las preguntas que no son especificas de la inteligencia no son aleatorias sino con sentido basandose en lo que dice la pregunta. 
