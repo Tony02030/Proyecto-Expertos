@@ -18,6 +18,7 @@ class Euclides:
         "Existencial", "Creativo", "Emocional", "Colaborativo"
         ]
     
+    #Obtiene la inteligencia de un usuario apartir de sus respuestas
     def get_user_intelligence(self, answers_user):
         self.calculate_euclidian_distance(answers_user)
         predominant_index = self.get_distances().index(min(self.get_distances()))
@@ -59,6 +60,7 @@ class Euclides:
             distance = math.sqrt(sum([(r - p) ** 2 for r, p in zip(answers_user, answers)]))
             distances.append(distance)
         self.set_distances(distances)
+        
     # Calcula la distancia euclidiana entre las respuestas de dos usuarios
     def calculate_euclidian_distance_users(self,answers_actual_user, answers_distinct):
             return math.sqrt(sum([(r - p) ** 2 for r, p in zip(answers_actual_user, answers_distinct)]))
