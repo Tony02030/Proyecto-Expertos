@@ -4,7 +4,7 @@ import logo from "../../img/logo.svg";
 export function Home ({ user , setUser }) {
     return(
         <>
-            <h1>Hola {user}, en este test conocerás qué tipo de inteligencia tienes.</h1> 
+            <h1>Hola {user}, con esta prueba conocerás qué tipo de inteligencia tienes.</h1> 
             <Carousel>
                 <Carousel.Item>
                     <img
