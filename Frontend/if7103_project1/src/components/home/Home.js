@@ -19,11 +19,11 @@ const imagePaths = {img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img
 export function Home({ user, setUser }) {
     return (
         <>
-            <h1>
+            <h1 className="my-text">
                 Hola {user}, en este test conocerás qué tipo de inteligencia tienes.
             </h1>
 
-            <Carousel interval={500}>
+            <Carousel interval={2000}>
                 {Object.values(imagePaths).map((image, index) => (
                 <Carousel.Item key={index}>
                     <img className="d-block w-100" src={image} alt={`Slide ${index + 1}`} />
