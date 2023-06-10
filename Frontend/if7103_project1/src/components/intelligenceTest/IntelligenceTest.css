@@ -1,0 +1,8 @@
+.my-card{
+    width: auto;
+    margin-block: 2rem;
+}
+
+.my-card .card-body .form-check-label{
+    font-size: 1rem;
+}

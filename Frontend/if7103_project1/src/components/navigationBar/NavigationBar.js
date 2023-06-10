@@ -14,8 +14,8 @@ export function NavigationBar ({ user , setUser }) {
                 <Navbar.Collapse id="navbar-nav">
                     <Nav className="mr-auto">
                     <Nav.Link as={Link} to="/">Home</Nav.Link>
-                    <Nav.Link as={Link} to="/personalityTest">Test de inteligencia</Nav.Link>
-                    <Nav.Link as={Link} to="/match">Match</Nav.Link>
+                    <Nav.Link as={Link} to="/intelligenceTest">Prueba de inteligencia</Nav.Link>
+                    <Nav.Link as={Link} to="/match">Afines</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                 <Nav className="justify-content-end">

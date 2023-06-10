@@ -12,11 +12,8 @@ export function Login({ setUser }){
             setError(true)
             return
         }
-
         setError(false)
-
         setUser([userName])
-        
     }
 
     return(
