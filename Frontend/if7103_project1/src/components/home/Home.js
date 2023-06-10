@@ -1,5 +1,6 @@
+import "./Home.css"
 import { Carousel } from "react-bootstrap";
-import logo from "../../img/logo.svg";
+import React from "react";
 import img1 from "../../img/1.png";
 import img2 from "../../img/2.png";
 import img3 from "../../img/3.png";
@@ -13,98 +14,22 @@ import img10 from "../../img/10.png";
 import img11 from "../../img/11.png";
 import img12 from "../../img/12.png";
 
+const imagePaths = {img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12};
 
 export function Home({ user, setUser }) {
     return (
         <>
-            <h1 style={{ textShadow: '2px 2px 4px #000000'}}>Hola {user}, en este test conocerás qué tipo de inteligencia tienes.</h1>
+            <h1>
+                Hola {user}, en este test conocerás qué tipo de inteligencia tienes.
+            </h1>
 
-            <Carousel interval={2000} >
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={img1}
-                        alt="First slide"
-                    />
+            <Carousel interval={500}>
+                {Object.values(imagePaths).map((image, index) => (
+                <Carousel.Item key={index}>
+                    <img className="d-block w-100" src={image} alt={`Slide ${index + 1}`} />
                 </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={img2}
-                        alt="Second slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={img3}
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={img4}
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={img5}
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={img6}
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={img7}
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={img8}
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={img9}
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={img10}
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={img11}
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={img12}
-                        alt="First slide"
-                    />
-                </Carousel.Item>
+                ))}
             </Carousel>
         </>
-    )
+    );
 }
