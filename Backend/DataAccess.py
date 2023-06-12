@@ -92,8 +92,8 @@ def get_similar_users(user_id):
                                     {'answers': {'$exists': True}},
                                     {'_id': {'$ne': user_id}}
                                     ]})
-              
-       #Genera un array de usuarios que contiene su nombre, su inteligencia y la distancia que tiene con el usuario a buscar
+
+        #Genera un array de usuarios que contiene su nombre, su inteligencia y la distancia que tiene con el usuario a buscar
         json_users_array=[]
         for dist_users in distinct_users:
             json_users_array.append({'user':dist_users['user'],'intelligence':dist_users['user_intelligence'],'distance':euclides.calculate_euclidian_distance_users(actual_user['answers'],dist_users['answers'])})
@@ -104,15 +104,6 @@ def get_similar_users(user_id):
         #Retorna la lista en formato json
         return json.loads(json.dumps(json_users_array))
 
-    except errors:
+    except Exception as e:
         # Retorna 0 si hubo un error
-        return 0
-
-
-
-
-
-
-
-    
-
+        return []

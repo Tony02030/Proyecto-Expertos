@@ -1,9 +1,12 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import DataAccess as dao
 from Euclides import Euclides
 import json
 
 app = Flask(__name__)
+
+cors = CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
 
 # Ruta para obtener los usuarios más parecidos al pasado por parámetro
 @app.route('/api/users/similar/<id>', methods=['GET'])
@@ -34,11 +37,10 @@ def get_user_by_id(id):
         return jsonify({'message': 'Usuario no encontrado'}), 404
     
 # Ruta para obtener un usuario por nombre y contraseña
-@app.route('/api/users/', methods=['GET'])
+@app.route('/api/users/login', methods=['POST'])
 def get_user_by_name_password():
     #Obtiene el body de la petición GET
     json_user = request.get_json()
-    
     #Obtiene el usuario a buscar
     document = dao.get_user_by_name_password(json_user)
 
