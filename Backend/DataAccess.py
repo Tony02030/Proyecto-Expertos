@@ -10,23 +10,32 @@ collection = db['Usuarios']
 #Guarda un usuario 
 def insert_user(user_info):
 
-    # Obtiene el contador actual del _id en la BD
-    counter_doc = collection.find_one({}, sort=[('_id', -1)])
-    counter = counter_doc['_id'] + 1 if counter_doc else 1
+    result = collection.find_one({'user': str(user_info['user'])})
+
+    #Verifica si el usuario ya existe en la BD
+    if result is None:
+        #Obtiene el contador actual del _id en la BD
+        counter_doc = collection.find_one({}, sort=[('_id', -1)])
+        counter = counter_doc['_id'] + 1 if counter_doc else 1
     
-    #Crea la estructura del documento que almacena la información del usuario
-    user = {
+        #Crea la estructura del documento que almacena la información del usuario
+        user = {
         '_id':counter,
         'user':user_info['user'],
         'password':user_info['password'],
-    }
+        }
 
-    try:
-        #Retorna el id del usuario creado
-        return collection.insert_one(user).inserted_id  
-    except errors:
-        #Retorna 0 si hubo un error        
+        try:
+            #Retorna 1 indicando que el usuario fue creado
+            collection.insert_one(user)
+            return 1
+        except errors:
+            #Retorna 0 si hubo un error        
+            return 0
+    else:
+        #Retorna 0 si ya existe en la BD
         return 0
+
     
 #Obtiene un usuario por su id
 def get_user_by_id(user_id):

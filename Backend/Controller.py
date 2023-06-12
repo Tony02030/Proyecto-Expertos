@@ -59,10 +59,12 @@ def save_user():
     new_user = request.get_json()
 
     #Inserta el usuario 
-    user_id = dao.insert_user(new_user)
+    result = dao.insert_user(new_user)
 
-    #Retorna un mensaje de éxito
-    return jsonify({'message': 'Usuario creado', 'id': str(user_id)}), 201
+    if result == 1:
+        return jsonify({'message': 'Usuario creado'}), 200
+    else:
+        return jsonify({'message': 'El usuario ya existe'}), 409
 
 # Ruta para obtener la inteligencia de un usuario
 @app.route('/api/users/<id>', methods=['PUT'])
