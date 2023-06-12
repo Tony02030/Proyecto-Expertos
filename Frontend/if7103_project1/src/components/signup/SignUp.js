@@ -13,10 +13,12 @@ export function SignUp({ setUser, setIdUser }){
         e.preventDefault()
         if(userName === "" || password === "" || password1 === ""){
             setMessage("Todos los campos son requeridos")
+            setMessageClass("alert alert-danger");
             setShowMessage(true)
             return
         } else if(password !== password1){
             setMessage("Las contraseñas deben ser iguales")
+            setMessageClass("alert alert-danger");
             setShowMessage(true)
             return
         } else {
@@ -27,8 +29,6 @@ export function SignUp({ setUser, setIdUser }){
 
     const postSaveUser = async (username, password) => {
         try {
-            var messageElement = document.getElementById("myMessage");
-            messageElement.classList.add("alert-danger");
             const url = 'http://localhost:5000/api/users/';
             const data = { user: username, password: password };
             const response = await fetch(url, {
@@ -65,13 +65,13 @@ export function SignUp({ setUser, setIdUser }){
                                 />
                             </div>
                             <div className="form-outline mb-4">
-                                <input type="password" className="form-control" id="password" placeholder="Ingresa tu contraseña"
+                                <input type="password" className="form-control" id="password" placeholder="Ingresa tu contraseña" autoComplete="on"
                                 value={password}
                                 onChange={event => setPassword(event.target.value)}
                                 />
                             </div>
                             <div className="form-outline mb-4">
-                                <input type="password" className="form-control" id="password1" placeholder="Ingresa nuevamente tu contraseña"
+                                <input type="password" className="form-control" id="password1" placeholder="Ingresa nuevamente tu contraseña" autoComplete="on"
                                 value={password1}
                                 onChange={event => setPassword1(event.target.value)}
                                 />

@@ -22,7 +22,7 @@ function App() {
         <Container>
           <Routes>
               <Route path="/" element={<Login setUser={setUser} setIdUser={setIdUser}/>} />
-              <Route path='signup' element={<SignUp setUser={setUser}/>} />
+              <Route path='/signup' element={<SignUp setUser={setUser}/>} />
           </Routes>
         </Container>
         </Router>
