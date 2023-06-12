@@ -22,7 +22,6 @@ export function Home({ user, setUser }) {
             <h1 className="my-text">
                 Hola {user}, en este test conocerás qué tipo de inteligencia tienes.
             </h1>
-
             <Carousel interval={2000}>
                 {Object.values(imagePaths).map((image, index) => (
                 <Carousel.Item key={index}>

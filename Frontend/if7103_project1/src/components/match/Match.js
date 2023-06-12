@@ -1,16 +1,37 @@
+import { useEffect, useState } from "react";
 import "./Match.css"
 import Table from 'react-bootstrap/Table';
 
-export function Match () {
-    const data = [
-        { user: 'Alberto', intelligence: 'Intrapersonal', distance: 11.874342087037917 },
-        { user: 'Karla', intelligence: 'Lógico-matemático', distance: 12.206555615733702 },
-    ];
+export function Match ({ idUser }) {
+    const [showMessage, setShowMessage] = useState(false)
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        fetchData();
+    }, []);
+    const fetchData = async () => {
+        try {
+            const response = await fetch('http://localhost:5000/api/users/similar/'+ idUser);
+            
+            if(!response.ok){
+                setShowMessage(true)
+            }else{
+                const jsonData = await response.json();
+                setData(jsonData);
+            }
+        } catch (error) {
+            setShowMessage(true)
+            console.error(error);
+        }
+    };
 
     return(
         <>
             <h1>Personas afines con tu inteligencia</h1>
-            
+            {showMessage && (
+                <div className="alert alert-danger" id="myMessage">
+                    Debes realizar la Prueba de inteligencia para ver a las personas afines contigo.
+                </div>
+            )}
             <Table responsive>
                 <thead>
                     <tr>

@@ -7,10 +7,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { IntelligenceTest } from './components/intelligenceTest/IntelligenceTest';
 import { Match }  from './components/match/Match';
 import { Container } from 'react-bootstrap';
-import { SignUp } from './components/signup/SignUp';
+import { SignUp } from './components/signUp/SignUp';
 
 function App() {
 
+  const [idUser, setIdUser] = useState([])
   const [user, setUser] = useState([])
 
   return (
@@ -20,21 +21,19 @@ function App() {
         <Router>
         <Container>
           <Routes>
-              <Route path="/" element={<Login setUser={setUser}/>} />
-              <Route path="/signup" element={<SignUp />} />
+              <Route path="/" element={<Login setUser={setUser} setIdUser={setIdUser}/>} />
+              <Route path='signup' element={<SignUp setUser={setUser}/>} />
           </Routes>
         </Container>
         </Router>
-
         : 
-        
         <Router>
           <NavigationBar user={user} setUser={setUser} />
           <Container>
             <Routes>
                 <Route path="/" element={<Home user={user} setUser={setUser}/>} />
-                <Route path="/intelligenceTest" element={<IntelligenceTest />} />
-                <Route path="/match" element={<Match />} />
+                <Route path="/intelligenceTest" element={<IntelligenceTest idUser={ idUser }/>} />
+                <Route path="/match" element={<Match idUser={ idUser }/>} />
             </Routes>
           </Container>
         </Router>
