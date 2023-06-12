@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { IntelligenceTest } from './components/intelligenceTest/IntelligenceTest';
 import { Match }  from './components/match/Match';
 import { Container } from 'react-bootstrap';
-import { SignUp } from './components/signUp/SignUp';
+import { SignUp } from './components/up/SignUp';
 
 function App() {
 
