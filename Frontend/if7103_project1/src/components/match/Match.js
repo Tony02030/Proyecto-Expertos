@@ -31,6 +31,7 @@ export function Match({ idUser }) {
     useEffect(() => {
         fetchData2();
     }, []);
+
     const fetchData2 = async () => {
         try {
             const response = await fetch('http://localhost:5000/api/users/id/' + idUser);
@@ -49,10 +50,13 @@ export function Match({ idUser }) {
 
     return (
         <>
-            <div>
-                <p>Tu inteligencia actual es: <strong><em>{data2.user_intelligence}</em></strong></p>
-            </div>
             <h2>Personas afines contigo basado en sus repuestas</h2>
+
+            {data2.user_intelligence &&(
+                <div className="alert alert-info" id="myMessage2">
+                    Tu inteligencia actual es: {data2.user_intelligence}
+                </div>
+            )}
 
             {showMessage && (
                 <div className="alert alert-danger" id="myMessage">
