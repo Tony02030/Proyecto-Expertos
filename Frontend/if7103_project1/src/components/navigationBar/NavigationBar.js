@@ -1,7 +1,7 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-export function NavigationBar ({ user , setUser }) {
+export function NavigationBar ({ setUser }) {
     const handleLogout = () => {
         setUser([])
     }

@@ -38,7 +38,7 @@ export function Login({ setUser, setIdUser }){
                 setUser([responseData.user])
             }
         } catch (error) {
-            //console.error('Error al enviar los datos del usuario:', error);
+            console.error('Error al enviar los datos del usuario:', error);
         }
     };
 

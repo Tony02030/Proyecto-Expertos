@@ -28,12 +28,12 @@ function App() {
         </Router>
         : 
         <Router>
-          <NavigationBar user={user} setUser={setUser} />
+          <NavigationBar setUser={setUser} />
           <Container>
             <Routes>
-                <Route path="/" element={<Home user={user} setUser={setUser}/>} />
-                <Route path="/intelligenceTest" element={<IntelligenceTest idUser={ idUser }/>} />
-                <Route path="/match" element={<Match idUser={ idUser }/>} />
+                <Route path="/" element={<Home user={user}/>} />
+                <Route path="/intelligenceTest" element={<IntelligenceTest idUser={idUser}/>} />
+                <Route path="/match" element={<Match idUser={idUser}/>} />
             </Routes>
           </Container>
         </Router>
