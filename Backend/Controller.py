@@ -76,15 +76,15 @@ def update_user(id):
     json_user_updated = request.get_json()
 
     #Obtiene la inteligencia del usuario apartir de sus respuestas
-    json_user_inteligence = json.loads(euclides.get_user_intelligence(json_user_updated["answers"]))
+    json_user_inteligence = euclides.get_user_intelligence(json_user_updated["answers"])
 
     #Actualiza la información del usuario en la BD
-    result = dao.update_user(id,json_user_updated, json_user_inteligence)
+    result = dao.update_user(id, json_user_inteligence, euclides)
 
     #Verifica el resultado de la actualización
     if result == 1:
         #Retorna la inteligencia del usuario
-        return json_user_inteligence, 200
+        return jsonify(json_user_inteligence), 200
     else:
         #Retorna un mensaje de error
         return jsonify({'message': 'Error'}), 404
