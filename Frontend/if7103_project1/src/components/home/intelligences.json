@@ -1,0 +1,76 @@
+{
+    "inteligencias": [
+        {
+            "id": 1,
+            "nombre": "Inteligencia espacial",
+            "descripcion": "Habilidad para visualizar y manipular objetos en el espacio, así como para orientarse y comprender mapas y gráficos.",
+            "url": "/img/1.png"
+        },
+        {
+            "id": 2,
+            "nombre": "Inteligencia musical",
+            "descripcion": "Capacidad para apreciar, componer y ejecutar piezas musicales, así como para reconocer y reproducir diferentes tonos, ritmos y patrones musicales.",
+            "url": "/img/2.png"
+        },
+        {
+            "id": 3,
+            "nombre": "Inteligencia lingüístico-verbal",
+            "descripcion": "Competencia en el uso y comprensión del lenguaje oral y escrito, habilidad para expresarse de manera efectiva, comprender textos y apreciar la estructura y el significado de las palabras.",
+            "url": "/img/3.png"
+        },
+        {
+            "id": 4,
+            "nombre": "Inteligencia lógico-matemática",
+            "descripcion": "Aptitud para razonar de manera lógica, pensar de forma abstracta, resolver problemas matemáticos y comprender principios y relaciones lógicas.",
+            "url": "/img/4.png"
+        },
+        {
+            "id": 5,
+            "nombre": "Inteligencia corporal-cinestésica",
+            "descripcion": "Destreza física y habilidad para controlar y coordinar el cuerpo, realizar movimientos precisos, así como para involucrarse en actividades deportivas y expresión artística a través del movimiento.",
+            "url": "/img/5.png"
+        },
+        {
+            "id": 6,
+            "nombre": "Inteligencia intrapersonal",
+            "descripcion": "Conocimiento y comprensión de uno mismo, capacidad de reflexionar, establecer metas personales, tomar decisiones y regular las propias emociones y acciones.",
+            "url": "/img/6.png"
+        },
+        {
+            "id": 7,
+            "nombre": "Inteligencia naturalista",
+            "descripcion": "Sensibilidad y capacidad para observar y comprender la naturaleza, clasificar y reconocer patrones en el mundo natural, así como para apreciar y proteger el entorno natural.",
+            "url": "/img/7.png"
+        },
+        {
+            "id": 8,
+            "nombre": "Inteligencia existencial",
+            "descripcion": "Reflexión y exploración de preguntas filosóficas y existenciales, como el sentido de la vida, la trascendencia y la conciencia de la propia existencia.",
+            "url": "/img/8.png"
+        },
+        {
+            "id": 9,
+            "nombre": "Inteligencia creativa",
+            "descripcion": "Imaginación, originalidad y capacidad para generar ideas nuevas, resolver problemas de forma novedosa y aplicar la creatividad en diferentes áreas.",
+            "url": "/img/9.png"
+        },
+        {
+            "id": 10,
+            "nombre": "Inteligencia emocional",
+            "descripcion": "Habilidad para reconocer, comprender y gestionar las propias emociones, así como para percibir y responder adecuadamente a las emociones de los demás.",
+            "url": "/img/10.png"
+        },
+        {
+            "id": 11,
+            "nombre": "Inteligencia colaborativa",
+            "descripcion": "Competencia para trabajar en equipo, cooperar, comunicarse eficientemente y contribuir de manera efectiva en la consecución de objetivos grupales.",
+            "url": "/img/11.png"
+        },
+        {
+            "id": 12,
+            "nombre": "Inteligencia interpersonal",
+            "descripcion": "Habilidad para entender y relacionarse eficazmente con otras personas, empatizar, trabajar en equipo, comunicarse de manera efectiva y resolver conflictos.",
+            "url": "/img/12.png"
+        }
+    ]
+}
